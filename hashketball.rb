@@ -155,16 +155,16 @@ def num_points_scored(name)
   end
 end
 
-def team_colors(name)
-  game_hash.each do |location, team_data|
-    team_data.each do |k, v|
-      if team_data[:team_name] == name
-        return team_data[:colors]
-        Next
-      end
-    end
-  end
-end
+# def team_colors(name)
+#   game_hash.each do |location, team_data|
+#     team_data.each do |k, v|
+#       if team_data[:team_name] == name
+#         return team_data[:colors]
+#         Next
+#       end
+#     end
+#   end
+# end
 
 def team_names
 #returns an array of team names
@@ -219,3 +219,14 @@ def big_shoe_rebounds
     end
   end
 end
+
+def team_colors(name)
+  game_hash.each do |location, team_data|
+      if team_data[:team_name] == name
+        return team_data[:colors]
+        Next
+      end
+  end
+end
+
+team_colors("Brooklyn Nets")
